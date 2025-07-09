@@ -5,7 +5,8 @@
 
 ---
 ## Demo
-![LlamaDemo](https://github.com/user-attachments/assets/58355380-2f4e-4a7f-bc84-ee6d4899ed27)
+
+![Screenshot 2025-07-09 171808](https://github.com/user-attachments/assets/0732f213-f42b-411f-8101-28767c1cc78d)
 
 ---
 
