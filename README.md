@@ -1,13 +1,18 @@
 
 # OllamaUI
 
-**OllamaUI** is a Java Spring Boot web app with a Thymeleaf frontend that lets users chat with Ollama large language models. It supports dynamic model selection via configuration properties for easy switching. Featuring a clean UI and seamless local API integration, it delivers an intuitive and flexible AI chat experience.
+**OllamaUI** is a Java Spring Boot web app with a Thymeleaf frontend that lets users chat with Locally hosted Ollama large language models. It supports dynamic model selection via configuration properties for easy switching. Featuring a clean UI and seamless local API integration, it delivers an intuitive and flexible AI chat experience.
+
+---
+## Demo
+
+![LlamaDemo](https://github.com/user-attachments/assets/58355380-2f4e-4a7f-bc84-ee6d4899ed27)
 
 ---
 
 ## Features
 
-- Chat interface powered by Ollama LLM backend  
+- Chat interface powered by LOCALLY hosted Ollama LLM backend  
 - Dynamic model selection via configuration properties  
 - Clean UI built with Thymeleaf and CSS  
 - Real-time chat with loading indicator  
@@ -26,7 +31,7 @@
 
 ### Installing Ollama and Models
 
-1. Download and install Ollama from the official website:  
+1. Download and install Ollama from the official website (LOCALLY hosted):  
    https://ollama.com  
 
 2. Verify installation by running in your terminal/command prompt:  
