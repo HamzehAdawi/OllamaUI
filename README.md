@@ -119,9 +119,9 @@ This project is licensed under the MIT License. See the LICENSE file for details
 ## Contact
 
 Hamzeh Adawi —  
-GitHub: https://github.com/HamzehAdawi  
-Email: hamzehjadawi@gmail.com  
+🤖 Enjoy chatting with Ollama!  🤖
+
 
 ---
 
- 🤖 Enjoy chatting with Ollama!  🤖
+ 
