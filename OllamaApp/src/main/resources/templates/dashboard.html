@@ -6,58 +6,49 @@
 </head>
 
 <body>
-    <div id="edit_box" class="box2">
+<div id="edit_box" class="box2">
 
-        <div id="edit_title">
-            <img src="/images/Ollama_pic.png" style="width:100px; height:auto;">
-            <h1> Ollama AI</h1>
-            <h4 th:text="'Model: ' + ${ollamaModel}"></h4>
-        </div>
-        <div class="loader" id="loading-dots">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-        <div class="inp_field">
-            <form th:action="@{/}" method="post" onsubmit="return showLoader()">
-            <label for="input"></label>
-                <br>
-                <div id="chat" th:if="${messageList != null and !#lists.isEmpty(messageList)}">
-                    <div th:each="msg : ${messageList}">
-                        <span th:utext="${#strings.replace(#strings.replace(msg, 'Me:', '<strong>Me:</strong>'), 'Ollama:', '<strong>Ollama:</strong>')}"></span>
-                    </div>
-                </div>
-                <div  >
-                    <textarea
-                            placeholder="Chat with Ollama..."
-                            id="input"
-                            name="input"
-                            style="font-size: 18px; width: 93.5%; height: 65px; resize: none"
-                            onkeydown="if(event.key === 'Enter'){ event.preventDefault(); showLoader(); this.form.submit(); }"></textarea>
-
-                </div>
-
-                <div id="button-pos">
-                    <button id="ask-button" type="submit">Ask</button>
-                </div>
-
-
-            </form>
-        </div>
-
+    <div id="edit_title">
+        <img src="/images/Ollama_pic.png" style="width:100px; height:auto;">
+        <h1> Ollama AI</h1>
+        <h4 th:text="'Model: ' + ${ollamaModel}"></h4>
     </div>
 
-    <script>
-        function showLoader() {
-            document.getElementById("loading-dots").style.display = "flex";
-            return true;
-        }
-    </script>
+    <div class="loader" id="loading-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
 
-    <script>
-        window.addEventListener('load', function() {
-            document.getElementById('loading-dots').style.display = 'none';
-        });
-    </script>
+    <div class="inp_field">
+        <form th:action="@{/}" method="post" onsubmit="return showLoader()">
+            <label for="input"></label>
+            <br>
+
+            <div id="chat" th:if="${messageList != null and !#lists.isEmpty(messageList)}" style="background-color: rgba(244,244,244,0.65); padding-left: 30px">
+                <div th:each="msg : ${messageList}">
+                    <pre><code class="language-java"
+                               th:utext="${#strings.replace(#strings.replace(msg, 'Me:', '<strong>Me:</strong>'), 'Ollama:', '<strong>Ollama:</strong>')}">
+                    </code></pre>
+                </div>
+            </div>
+
+            <div>
+                <textarea
+                    placeholder="Chat with Ollama..."
+                    id="input"
+                    name="input"
+                    style="font-size: 16px; width: 94.5%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    height: 65px; resize: none; padding-left: 10px; padding-top: 10px; text-align: left;"></textarea>
+            </div>
+
+            <div id="button-pos">
+                <button id="ask-button" type="submit">Ask</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script th:src="@{/js/dashboard-script.js}"></script>
 </body>
 </html>

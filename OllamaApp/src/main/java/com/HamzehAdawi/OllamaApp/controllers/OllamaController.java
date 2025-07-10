@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/")
@@ -27,6 +29,9 @@ public class OllamaController {
     @GetMapping()
     public String homePage(Model model) {
         model.addAttribute("ollamaModel", appConfig.getOllamaModel());
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Ollama: "+ ollamaServiceImpl.chat("give a friendly, and warm greeting."));
+        model.addAttribute("messageList", list);
         return "dashboard";
     }
     @PostMapping()
